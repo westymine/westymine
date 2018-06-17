@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}} | Правила</title>
+    <link href="/{{templatePath}}/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/{{templatePath}}/css/font-awesome.min.css">
+    <link href="/{{templatePath}}/css/animate.css" rel="stylesheet">
+  </head>
+    <style>
+    body {
+    background: #fff url('/{{templatePath}}/img/bg.png') repeat;
+    height: 100%;
+    }
+    </style>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Скрыть навигацию</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style="color: #FFD700">{{title}}</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/"><i class="fa fa-home"></i> Главная</a></li>
+				<li><a href="?go=surcharge"><i class="fa fa-user-plus"></i> Доплата</a></li>
+				<li><a href="?go=news"><i class="fa fa-users"></i> Новости</a></li>
+				<li><a href="?go=konsol"><i class="fa fa-user-secret"></i> Консоль</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-pencil"></i> Правила <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Правила</li>
+                        <li><a href="?go=rules"><i class="fa fa-pencil"></i> Основные</a></li>
+						<li><a href="?go=security"><i class="fa fa-key"></i> Безопасность</a></li>
+                      </ul>
+                </li>
+				<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-rocket"></i> Другое <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Прочее</li>
+                        <li><a href="{{serverVK}}"  rel="nofollow" target="_blank"><i class="fa fa-users"></i> Группа ВКонтакте</a></li>
+						<li><a href="{{adminVK}}"  rel="nofollow" target="_blank"><i class="fa fa-user-secret"></i> Администратор</a></li>
+						<li><a href="http://minecraft-hosting.ru/aff.php?aff=2425"  rel="nofollow" target="_blank"><i class="fa fa-users"></i> Хостинг</a></li>
+                      </ul>
+                </li>
+            </ul>
+                <li class="btn-group pull-right">
+                    <a href="#" class="btn btn-default navbar-btn hidden-sm hidden-xs" type="button" data-toggle="modal" data-target="#donate"><i class="fa fa-rub"></i> Пожертвовать</a>
+		<!-- a href="?go=stats" class="btn btn-default navbar-btn hidden-sm hidden-xs"><i class="fa fa-cog"></i> Stats</a -->
+                </li>
+        </div>
+      </div>
+    </nav>
+	<br /><br /><br /><br />
+	
+<div class="modal fade" id="donate" tabindex="-1" role="dialog" aria-labelledby="donate" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+ <center>
+                    <div class="alert alert-dismissable alert-warning">
+                            <h4>Внимание!</h4>
+                            <p>Не менее 10 рублей.</p>
+                    </div></center><br />
+                <center>
+                    <div class="form-group">
+                        <div class="input-group">
+                                <input id="sum" name="sum" type="text" class="form-control" placeholder="Сумма пожертвования">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-primary" onclick="Donfromsw()">Пожертвовать</button>
+                                    </span>
+		
+                        </div>
+                    </div>
+                </center><br>
+              </div>
+            </div>
+          </div>
+        </div>	<link rel="stylesheet" media="all" href="/{{templatePath}}/css/main.css" />
+	
+	<style>
+	body {
+    background: #fff url('/{{templatePath}}/img/bg.png') repeat;
+    height: 100%;
+    }
+	</style>
+
+<script src="Assets/js/jq.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
+            <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+          <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">1. Общие правила</button>
+        </div>
+        <div class="panel-collapse collapse out">
+          <div class="panel-body">
+            <p>1.1 Незнание правил не освобождает вас от ответственности.</p></li>
+			<p><span class="badge-red">Важно</span> 1.2 Начав играть на наших серверах, Вы автоматически подтверждаете своё согласие с данным сводом правил.</p>
+			<p>1.3 Администратор вправе наказать игрока по причине, не указанной в настоящих правилах.</p>
+			<p>1.4 Администрация не несет ответственности за временную или постоянную невозможность игры на сервере конкретным лицом или группой лиц.</p>
+			<p>1.5 Игроки обязаны выполнять требования Администрации и предписания данных правил.</p>
+			<p>1.6 Администрация ведет логи всех действий игроков на сервере и всех сообщений чата.</p>
+			<p>1.7 Администрация имеет право корректировать данный свод правил без уведомления игрока.</p>
+          </div>
+        </div>
+      </div>
+	  <div class="panel panel-default">
+        <div class="panel-heading">
+          <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">2. Аккаунт</button>
+        </div>
+        <div class="panel-collapse collapse out">
+          <div class="panel-body">
+            <p>2.1 Ник не должен содержать мата, оскорблений и т.д.</p>
+			<p>2.2 Запрещается предоставлять свой аккаунт 3-м лицам для игры на сервере.</p>
+			<p><span class="badge-red">Важно</span> 2.3 Ответственность несет владелец аккаунта, независимо от того, кто совершал действия под данным аккаунтом.</p>
+			<p><span class="badge-red">Важно*</span> 2.4 Запрещена продажа/передача аккаунтов, продажа привилегий.</p>
+			<p>2.5 Администрация сервера восстанавливает взломанные/потерянные аккаунты только если Вы купили привилегию и можете написать номер чека, номер кошелька, кредитной карты или телефона с помощью которого вы оплачивали донат.</p>
+            <p>2.6 Донат не переносится на другой ник в целях безопасности.</p>
+          </div>
+        </div>
+      </div>
+	  <div class="panel panel-default">
+        <div class="panel-heading">
+          <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">3. Общие правила поведения игроков на сервере</button>
+        </div>
+        <div class="panel-collapse collapse out">
+          <div class="panel-body">
+            <p><span class="badge-red">Важно</span> 3.1 <u><span style="color:#0000FF">Разрешены</u></span> любые способы гриферства, ловушки.</p>
+			<p>3.2 Запрещено мошенничество, намеренный обман администрации.</p>
+			<span>3.3 Администрация НЕ обязана возвращать вещи в следующих случаях:</span><br />
+			<span>Удаление системой очистки дропа.</span><br />
+			<span>Кража имущества с незаприваченной территории.</span><br />
+			<span>Кража имущества игроками, состоящими в привате.</span><br />
+			<span>Вайп или откат карты.</span><br />
+			<span>Различные баги игры, произошедшие не по вине администрации.</span><br />
+			<p></p>
+			<p>3.4 Администрация не обязана осуществлять Вам помощь в виде ускорения постройки здания, выдачи предметов, ресурсов и др.</p>
+			<p>3.5 Запрещено попрошайничество (выпрашивать что-либо у администрации/игроков на безвозмездной основе).</p>
+			<p>3.6 Запрещено продавать игровые предметы за реальные деньги.</p>
+			<p>3.7 Игрок имеет право проводить раздачи.</p>
+			<p><span class="badge-red">Важно</span> 3.8 Игрок <u><span style="color:#0000FF">имеет</u></span> право пользоваться сторонними программами, скриптами, модами (читы) и т.п. для облегчения или изменения игрового процесса (читы).</p>
+			<p>3.9 Вызывание неполадок в работе сервера или попытки обрушить сервер, путем специально вызванных лагов или подобного, влекут за собой глобальный бан.</p>
+			<p>3.10 Запрещено подстрекать третьих лиц на нарушение правил.</p>
+			<span>3.11 Запрещено выдавать себя за администрацию.</span><br />
+			<span>Команда проекта ВСЕГДА имеет префикс [Основатель]
+			<br />
+			</span><br />
+          </div>
+        </div>
+      </div>
+	<div class="panel panel-default">
+        <div class="panel-heading">
+          <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">4. Правила для донатеров</button>
+        </div>
+        <div class="panel-collapse collapse out">
+          <div class="panel-body">
+            <p>4.1 Донатер не имеет право кикать, банить, давать мут без причины.</p>
+            <p>4.2 Донатер не имеет право ломать чужие дома даже если они ему не нравятся.</p>
+            <p>4.3 Донатер не имеет право убивать в креативе, флае, режиме "бога", а также в ванише (невидимый режим).</p>
+			<p><span class="badge-red">Важно*</span> 4.4 Донатер <u><span style="color:#FF0000">не имеет</u></span> право давать бан/кик за гриферство, раздачи, ловушки, дюп, читы, а также с причиной "за разбаном в скайп", нецензурной лексикой, добавлением в регион и оскорблением игрока.</p>
+            <p>4.5 Телепортация без причины и убийство без разрешения игрока запрещена.</p>
+            <p>4.6 Донатерам запрещено забирать у игроков какие-либо вещи (кроме оружия с уроном больше 7) и мешать игровому процессу.</p>
+			<p><span class="badge-red">Важно*</span> 4.7 <u><span style="color:#FF0000">Строго</u></span> запрещается разбанивать игроков, которых забанил <u>Dagusz</u>.
+            <p>4.8 Попытка нанести вред серверу карается баном навсегда или снятием доната.</p>
+			<p>4.9 Донатер (также как и игрок) имеет право проводить раздачи.</p>
+          </div>
+        </div>
+      </div>
+	<div class="panel panel-default">
+        <div class="panel-heading">
+          <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">5. Постройки</button>
+        </div>
+        <div class="panel-collapse collapse out">
+          <div class="panel-body">
+           <p><span class="badge-red">Важно</span> 5.1 Запрещены постройки создающие лаги и замедляющие работу сервера.</p>
+			<p>5.2 Постройки оставленные за зоной привата будут доступны для других игроков. Администрация не несет ответственность за потерю имущества.</p>
+			<p>5.3 Вся незаприваченная территория попавшая под приват другого игрока становится его собственностью.</p>
+			<p>5.4 Игрок обязан покинуть чужую территорию по просьбе ее хозяина.</p>
+			<p>5.5 Запрещено ставить точки дома/варпы на чужой территории без согласия владельца.</p>
+			<p>5.6 Запрещено приватить территорию над постройками других игроков.</p>
+			<p>5.7 Запрещена блокировка доступа к чужим сооружениям.</p>
+			<p>5.8 Запрещается постройка половых органов.</p>
+			<p>5.9 Запрещается строить дома в воздухе.</p>
+			<p>5.10 Запрещается постройка столбов.</p>
+			<p>5.11 Запрещается постройка домов без крыши.</p>
+
+
+          </div>
+        </div>
+      </div>
+	<div class="panel panel-default">
+        <div class="panel-heading">
+          <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">6. Общение в чате</button>
+        </div>
+        <div class="panel-collapse collapse out">
+          <div class="panel-body">
+            <p>6.1 Игрок не имеет право материться (завуалированный мат), оскорблять кого-либо, унижать честь и достоинство, ущемлять в правах игроков и т.п.</p>
+			<p>6.2 Игрок не имеет право оскорблять, критиковать администрацию проекта.</p>
+			<p>6.3 Запрещён спам.</p>
+			<p>6.4 Запрещёно написание сообщения заглавными буквами (капс).</p>
+			<p>6.5 Запрещено разглашать ложную информацию.</p>
+			<p>6.6 Флуд (в том числе дублирование сообщений) и сообщения, не имеющие смысла, в больших количествах запрещены.</p>
+			<p>6.7 Запрещены выражения, унижающие человеческое достоинство, дискриминирующие или разжигающие межнациональную рознь.</p>
+			<p>6.8 Запрещено просить игроков выйти из игры когда все слоты заполнены.</p>
+			<p>6.9 Запрещено коверкать слова с целью обхода антимат системы чата.</p>
+			<span>6.10 Обсуждение политики запрещено.</span><br />
+			<span>Мы не хотим, чтобы игроки становились врагами из-за политики тех или иных стран. Давайте жить дружно (с)</span><br />
+			<p></p>
+			<p>6.11 Разрешена публикация только одного сообщения рекламного характера (например, реклама варпов) раз в 2 мин. В противном случае это будет засчитано за флуд.</p>
+			<p>6.12 Для просьб "кто приютит" разрешена публикация сообщений не чаще одного раза в 5 мин. В противном случае это будет засчитано за флуд.</p>
+          </div>
+        </div>
+      </div>
+	<div class="panel panel-default">
+        <div class="panel-heading">
+          <button type="button" class="btn btn-default btn-xs spoiler-trigger" data-toggle="collapse">7. Платные услуги</button>
+        </div>
+        <div class="panel-collapse collapse out">
+          <div class="panel-body">
+            <p><span class="badge-red">Важно</span> 7.1 Деньги, потраченные на услуги сервера, не возвращаются не при каких обстоятельствах.</p>
+			<p>7.2 Попытки махинаций оплатами, или ввод Администрации в заблуждение наказываются баном без возврата средств.</p>
+			<p>7.3 Администрация имеет полное право на отказ в предоставление услуг по причинам: неадекватность, требование несуществующих услуг, наглеж, оскорбления, и т.д.</p>
+			<p>7.4 Администрация не возвращает купленные вещи, которые были потеряны в результате убийства или удалены системой очистки дропа.</p>
+			<p>7.5 Предоставьте чек оплаты, если хотите написать Администрации о пропаже, непоявлении доната после покупки. Без данного подтверждения администрация вправе отказать Вам в предоставлении купленной услуги.</p>
+          </div>
+        </div>
+      </div>
+	  <legend></legend>
+	* - За нарушение данного правила Администрация сразу снимет привилегию без возможности обжалования (высокая степень строгости).
+	<p>Если Вы заметили, что кто-то нарушает данный список правил, сразу же подавайте жалобу в <a href="{{adminVK}}">специальный для этого есть редактор</a>.</p>	<legend></legend>
+	<div>В случае, если была найдена ошибка, или же Вы хотите добавить новое правило - напишите <a href="{{adminVK}}">редактору</a>.</div>
+
+	
+<script>
+$(".spoiler-trigger").click(function() {
+		$(this).parent().next().collapse('toggle');
+	});
+</script>        </div>
+</div>
+﻿
+        <div id="footer">
+            <div class="container hidden-sm hidden-xs">
+                <hr>
+                <ul class="nav nav-pills">
+                    <li class="pull-right">
+					
+					© {{title}}. Нам уже {{projectDays}} дня(ей).
+                    </li>
+                </ul>
+            </div>
+        </div>
+        			<script src="/{{templatePath}}/js/jq.js"></script>
+    <script src="/{{templatePath}}/js/bootstrap.min.js"></script>
+        <script>
+            function fnSelect(object) {
+                fnDeSelect();
+                if (document.selection) {
+                    var range = document.body.createTextRange();
+                    range.moveToElementText(object);
+                    range.select();
+                } else if (window.getSelection) {
+                    var range = document.createRange();
+                    range.selectNode(object);
+                    window.getSelection().addRange(range);
+                }
+            }
+
+            function fnDeSelect() {
+                if (document.selection) {
+                 document.selection.empty(); 
+                }
+                else if (window.getSelection) {
+                    window.getSelection().removeAllRanges();
+                }
+            }
+            $("span.sel-host").click(function(){
+                fnSelect(this);
+            });
+function Donfromsw() {
+var sum = $("#sum").val();
+if (sum < 9) {
+} else {
+location.href="https://unitpay.ru/pay/{{unitpayPublicKey}}/qiwi?sum=" + sum + "&account=donate&desc=Пожертвование+в+сторону+проекта+{{title}}";
+    }
+    }
+
+        </script>
+        {{yandexCounter}}
+  </body>
+</html>

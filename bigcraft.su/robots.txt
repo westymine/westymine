@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin
+Disallow: /classes
+Disallow: /install
+Disallow: /MinecraftServerPlugins
+Disallow: /template
+Disallow: /admin.php
+Disallow: /config.php
+Disallow: /install.php
+Disallow: /unban.php
+Disallow: /unitpay.php

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}} | Доплата</title>
+    <link href="/{{templatePath}}/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/{{templatePath}}/css/font-awesome.min.css">
+	<link href="/{{templatePath}}/css/animate.css" rel="stylesheet">
+    <style>
+    body {
+    background: #fff url('/{{templatePath}}/img/bg.png') repeat;
+    height: 100%;
+    }
+    </style>
+        <script type="text/javascript">
+            function stopRKey(evt) {
+                var evt = (evt) ? evt : ((event) ? event : null);
+                var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+                if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+            }
+            document.onkeypress = stopRKey;
+        </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Скрыть навигацию</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style="color: #FFD700">{{title}}</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/"><i class="fa fa-home"></i> Главная</a></li>
+				<li><a href="?go=surcharge"><i class="fa fa-user-plus"></i> Доплата</a></li>
+				<li><a href="?go=news"><i class="fa fa-users"></i> Новости</a></li>
+				<li><a href="?go=konsol"><i class="fa fa-user-secret"></i> Консоль</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-pencil"></i> Правила <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Правила</li>
+                        <li><a href="?go=rules"><i class="fa fa-pencil"></i> Основные</a></li>
+						<li><a href="?go=security"><i class="fa fa-key"></i> Безопасность</a></li>
+                      </ul>
+                </li>
+				<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-rocket"></i> Другое <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Прочее</li>
+                        <li><a href="{{serverVK}}"  rel="nofollow" target="_blank"><i class="fa fa-users"></i> Группа ВКонтакте</a></li>
+						<li><a href="{{adminVK}}"  rel="nofollow" target="_blank"><i class="fa fa-user-secret"></i> Администратор</a></li>
+						<li><a href="http://minecraft-hosting.ru/aff.php?aff=2425"  rel="nofollow" target="_blank"><i class="fa fa-users"></i> Хостинг</a></li>
+                      </ul>
+                </li>
+            </ul>
+                <li class="btn-group pull-right">
+                    <a href="#" class="btn btn-default navbar-btn hidden-sm hidden-xs" type="button" data-toggle="modal" data-target="#donate"><i class="fa fa-rub"></i> Пожертвовать</a>
+		<!-- a href="?go=stats" class="btn btn-default navbar-btn hidden-sm hidden-xs"><i class="fa fa-cog"></i> Stats</a -->
+                </li>
+        </div>
+      </div>
+    </nav>
+	<br /><br /><br /><br />
+	
+<div class="modal fade" id="donate" tabindex="-1" role="dialog" aria-labelledby="donate" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+ <center>
+                    <div class="alert alert-dismissable alert-warning">
+                            <h4>Внимание!</h4>
+                            <p>Не менее 10 рублей.</p>
+                    </div></center><br />
+                <center>
+                    <div class="form-group">
+                        <div class="input-group">
+                                <input id="sum" name="sum" type="text" class="form-control" placeholder="Сумма пожертвования">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-primary" onclick="Donfromsw()">Пожертвовать</button>
+                                    </span>
+		
+                        </div>
+                    </div>
+                </center><br>
+              </div>
+            </div>
+          </div>
+        </div>    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form action="/payment.pl" method="post">
+                    <div class="row">
+                        <legend align="center">Консоль</legend>
+                            <div class="form-group">
+                              <center><div class="input-group" style="width: 50%">
+                                <span class="input-group-addon">Введите Ник</span>
+                                <input type="text" class="form-control" id="inputName" name="donatePlayer" placeholder="Введите Ваш ник" required="required" />
+                              </div></center>
+							  <br>
+                              <center><div class="input-group" style="width: 50%">
+                                <span class="input-group-addon">Введите пароль</span>
+                                <input type="password" class="form-control" id="inputName" name="donatePlayer" placeholder="Введите Ваш пароль" required="required" />
+                              </div></center>
+                            </div>
+                        </div>
+                            <center><button id='pay' style="width: 40%" type="submit" class="btn btn-success btn-block"><i"></i> Войти <span id='sum'><i id='rubrub' class=""></i></span></button></center>
+                            <br />
+                            <center><p>Только для Привилегий Гл.Владелец и выше!</p></center>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/{{templatePath}}/js/jq.js"></script>
+	<script src="/{{templatePath}}/js/check_name.js"></script>﻿
+        <div id="footer">
+            <div class="container hidden-sm hidden-xs">
+                <hr>
+                <ul class="nav nav-pills">
+                    <li class="pull-right">
+					
+					© {{title}}. Нам уже {{projectDays}} дня(ей).
+                    </li>
+                </ul>
+            </div>
+        </div>
+        			<script src="/{{templatePath}}/js/jq.js"></script>
+    <script src="/{{templatePath}}/js/bootstrap.min.js"></script>
+        <script>
+            function fnSelect(object) {
+                fnDeSelect();
+                if (document.selection) {
+                    var range = document.body.createTextRange();
+                    range.moveToElementText(object);
+                    range.select();
+                } else if (window.getSelection) {
+                    var range = document.createRange();
+                    range.selectNode(object);
+                    window.getSelection().addRange(range);
+                }
+            }
+
+            function fnDeSelect() {
+                if (document.selection) {
+                 document.selection.empty(); 
+                }
+                else if (window.getSelection) {
+                    window.getSelection().removeAllRanges();
+                }
+            }
+            $("span.sel-host").click(function(){
+                fnSelect(this);
+            });
+            function Donfromsw() {
+                var sum = $("#sum").val();
+                if (sum < 9) {
+                } else {
+                    location.href="https://unitpay.ru/pay/{{unitpayPublicKey}}/qiwi?sum=" + sum + "&account=donate&desc=Пожертвование+в+сторону+проекта+{{title}}";
+                }
+            }
+        </script>
+        {{yandexCounter}}
+  </body>
+</html>

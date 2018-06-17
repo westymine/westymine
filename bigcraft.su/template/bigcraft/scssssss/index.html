@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}} | Главная</title>
+    <link href="/{{templatePath}}/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/{{templatePath}}/css/font-awesome.min.css">
+
+	<link href="/{{templatePath}}/css/animate.css" rel="stylesheet">
+  </head>
+    <style>
+    body {
+    background: #fff url('/{{templatePath}}/img/bg.png') repeat;
+    height: 100%;
+    }
+    </style>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Скрыть навигацию</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style="color: #FFD700">{{title}}</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/"><i class="fa fa-home"></i> Главная</a></li>
+				<li><a href="?go=surcharge"><i class="fa fa-user-plus"></i> Доплата</a></li>
+				<li><a href="?go=news"><i class="fa fa-users"></i> Новости</a></li>
+				<li><a href="?go=konsol"><i class="fa fa-user-secret"></i> Консоль</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-pencil"></i> Правила <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Правила</li>
+                        <li><a href="?go=rules"><i class="fa fa-pencil"></i> Основные</a></li>
+						<li><a href="?go=security"><i class="fa fa-key"></i> Безопасность</a></li>
+                      </ul>
+                </li>
+				<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-rocket"></i> Другое <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Прочее</li>
+                        <li><a href="{{serverVK}}"  rel="nofollow" target="_blank"><i class="fa fa-users"></i> Группа ВКонтакте</a></li>
+						<li><a href="{{adminVK}}"  rel="nofollow" target="_blank"><i class="fa fa-user-secret"></i> Администратор</a></li>
+						<li><a href="http://minecraft-hosting.ru/aff.php?aff=2425"  rel="nofollow" target="_blank"><i class="fa fa-users"></i> Хостинг</a></li>
+                      </ul>
+                </li>
+            </ul>
+                <li class="btn-group pull-right">
+                    <a href="#" class="btn btn-default navbar-btn hidden-sm hidden-xs" type="button" data-toggle="modal" data-target="#donate"><i class="fa fa-rub"></i> Пожертвовать</a>
+		<!-- a href="?go=stats" class="btn btn-default navbar-btn hidden-sm hidden-xs"><i class="fa fa-cog"></i> Stats</a -->
+                </li>
+        </div>
+      </div>
+    </nav>
+	<br /><br /><br /><br />
+	
+<div class="modal fade" id="donate" tabindex="-1" role="dialog" aria-labelledby="donate" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+ <center>
+                    <div class="alert alert-dismissable alert-warning">
+                            <h4>Внимание!</h4>
+                            <p>Не менее 10 рублей.</p>
+                    </div></center><br />
+                <center>
+                    <div class="form-group">
+                        <div class="input-group">
+                                <input id="sum" name="sum" type="text" class="form-control" placeholder="Сумма пожертвования">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-primary" onclick="Donfromsw()">Пожертвовать</button>
+                                    </span>
+		
+                        </div>
+                    </div>
+                </center><br>
+              </div>
+            </div>
+          </div>
+        </div>    <style>
+            .sel-host{padding:1px 2px;border:1px solid #ccc;color:#d14;font-family:'Courier new',consolas,monospace;border-radius:3px}.cl-1 .sel-host{border:1px solid #fb531c;color:#fff}.cl-2 .sel-host{border:1px solid #f2ca05;color:#fff}.cl-3 .sel-host{border:1px solid #b7f202;color:#fff}.cl-4 .sel-host{border:1px solid #3ecdfc;color:#fff}
+			[role="button"]{cursor:pointer}.tooltip{position:absolute;z-index:1070;display:block;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:12px;font-weight:normal;line-height:1.4;opacity:0;filter:alpha(opacity=0)}.tooltip.in{opacity:0.9;filter:alpha(opacity=90)}.tooltip.top{margin-top:-3px;padding:5px 0}.tooltip.right{margin-left:3px;padding:0 5px}.tooltip.bottom{margin-top:3px;padding:5px 0}.tooltip.left{margin-left:-3px;padding:0 5px}.tooltip-inner{max-width:200px;padding:3px 8px;color:#ffffff;text-align:center;text-decoration:none;background-color:#000000;border-radius:4px}.tooltip-arrow{position:absolute;width:0;height:0;border-color:transparent;border-style:solid}.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:#000000}.tooltip.top-left .tooltip-arrow{bottom:0;right:5px;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#000000}.tooltip.top-right .tooltip-arrow{bottom:0;left:5px;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#000000}.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#000000}.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:#000000}.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#000000}.tooltip.bottom-left .tooltip-arrow{top:0;right:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#000000}.tooltip.bottom-right .tooltip-arrow{top:0;left:5px;margin-top:-5px;border-width:0 5px 5px;border-bottom-color:#000000}.popover{position:absolute;top:0;left:0;z-index:1060;display:none;max-width:276px;padding:1px;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:14px;font-weight:normal;line-height:1.42857143;text-align:left;background-color:#ffffff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #cccccc;border:1px solid rgba(0, 0, 0, 0.2);border-radius:6px;-webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);white-space:normal}.popover.top{margin-top:-10px}.popover.right{margin-left:10px}.popover.bottom{margin-top:10px}.popover.left{margin-left:-10px}.popover-title{margin:0;padding:8px 14px;font-size:14px;background-color:#f7f7f7;border-bottom:1px solid #ebebeb;border-radius:5px 5px 0 0}.popover-content{padding:9px 14px}.popover > .arrow,.popover > .arrow:after{position:absolute;display:block;width:0;height:0;border-color:transparent;border-style:solid}.popover > .arrow{border-width:11px}.popover > .arrow:after{border-width:10px;content:""}.popover.top > .arrow{left:50%;margin-left:-11px;border-bottom-width:0;border-top-color:#999999;border-top-color:rgba(0, 0, 0, 0.25);bottom:-11px}.popover.top > .arrow:after{content:" ";bottom:1px;margin-left:-10px;border-bottom-width:0;border-top-color:#ffffff}.popover.right > .arrow{top:50%;left:-11px;margin-top:-11px;border-left-width:0;border-right-color:#999999;border-right-color:rgba(0, 0, 0, 0.25)}.popover.right > .arrow:after{content:" ";left:1px;bottom:-10px;border-left-width:0;border-right-color:#ffffff}.popover.bottom > .arrow{left:50%;margin-left:-11px;border-top-width:0;border-bottom-color:#999999;border-bottom-color:rgba(0, 0, 0, 0.25);top:-11px}.popover.bottom > .arrow:after{content:" ";top:1px;margin-left:-10px;border-top-width:0;border-bottom-color:#ffffff}.popover.left > .arrow{top:50%;right:-11px;margin-top:-11px;border-right-width:0;border-left-color:#999999;border-left-color:rgba(0, 0, 0, 0.25)}.popover.left > .arrow:after{content:" ";right:1px;border-right-width:0;border-left-color:#ffffff;bottom:-10px}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}
+
+        </style>
+    <div class="container">
+        <div class="row">
+			<div class="panel panel-default">
+			  <div class="panel-body" style="background: #fff url('/{{templatePath}}/img/bg.png') repeat;">
+				<center>
+					<div class="col-md-1 hidden-xs hidden-sm"></div>
+					<div class="col-md-2 hidden-xs hidden-sm animated zoomIn">
+						<br><br>
+								<div class="panel panel-success">
+									<div class="panel-body" style="height: 50px; background: #dff0d8;"><b><p style="font-size: 20px" id="online">{{playersOnline}}</p></b></div>
+									<div style="margin-left: -50px"><a tabindex="0" id="pop_connect" role="button" data-placement="left" data-toggle="popover" data-trigger="focus" title="Ошибка подключения" data-content="Онлайн не был получен, так как нет подключения к серверу - выводим предыдущий результат."></a></div>
+									<div class="panel-heading"><h3 class="panel-title">Онлайн</h3></div>
+								</div>
+					</div>
+					<div class="col-md-6 hidden-xs hidden-sm">
+						<h1 style="font-size: 60px"><b>{{title}}</b></h1>
+						<center><p style="font-size: 25px">Наш IP: <span class="sel-host">{{serverIp}}:{{serverPort}}</span></p></center>
+					</div>
+					<div class="visible-xs visible-sm">
+						<h1><b>{{title}}</b></h1>
+						<center><p>Наш IP: <span class="sel-host">{{serverIp}}:{{serverPort}}</span></p></center>
+					</div>
+					<div class="col-md-2 hidden-xs hidden-sm animated zoomIn">
+						<br><br><div class="panel panel-info">
+									<div class="panel-body" style="height: 50px; background: #d9edf7;"><b><p style="font-size: 20px" id="record">{{playersRecord}}</p></b></div>
+									<div class="panel-heading"><h3 class="panel-title">Рекорд</h3></div>
+								</div>
+					</div>
+				</center>
+			  </div>
+			</div>
+                <div class="alert alert-dismissible alert-info text-center">
+                  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong>Внимание! </strong>скидка 75% на все привилегии ( Цены указаны с учетом скидки )          </div>
+			<div class="col col-md-2" style="width: 230px;"></div>
+			<div class="col col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">Покупка привилегий</div>
+						<div class="panel-body">
+							<form action="/payment.pl" method="post">
+								<div id="error"></div>
+								<div class="row">
+									<div class="col-md-12">
+									</div>
+									<div class="col-md-12">
+										<div class="form-group" id="fInputName">
+											<label for="inputName">Введите логин: </label>
+											<input type="text" class="form-control" id="inputName" name="donatePlayer" placeholder="Введите Ваш ник" required="required" />
+										</div>
+										<div class="form-group" id="fSelectGroup">
+											<label for="inputStatus">Выбeрите нужный статус: </label>
+											<select name="donateItem" class="form-control" id="inputStatus">
+												{{donateList}}
+											</select>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<p style="margin-top: 5px" class="pull-left hidden">Возникли проблемы при покупке? Пишите <a href="{{adminVK}}"><b><u>администратору</u></b></a>.</p>
+										<center><button type="submit" class="btn btn-success btn-lg " id="buybutton"><i class="fa fa-shopping-cart"></i> Купить</button></center>
+										<a href="?go=surcharge" class="btn btn-info btn-block" style="width: 110px;float: right;padding: 11px;">Доплата <i class="fa fa-reply"></i></a>
+									</div>
+								</div>
+							</form>
+						</div>
+				</div>
+			</div>
+
+        </div>
+    </div>
+
+        <div id="footer">
+            <div class="container hidden-sm hidden-xs">
+                <hr>
+                <ul class="nav nav-pills">
+                    <li class="pull-right">
+					
+					© {{title}}. Нам уже {{projectDays}} дня(ей).
+                    </li>
+                </ul>
+            </div>
+        </div>
+        			<script src="/{{templatePath}}/js/jq.js"></script>
+    <script src="/{{templatePath}}/js/bootstrap.min.js"></script>
+        <script>
+            function fnSelect(object) {
+                fnDeSelect();
+                if (document.selection) {
+                    var range = document.body.createTextRange();
+                    range.moveToElementText(object);
+                    range.select();
+                } else if (window.getSelection) {
+                    var range = document.createRange();
+                    range.selectNode(object);
+                    window.getSelection().addRange(range);
+                }
+            }
+
+            function fnDeSelect() {
+                if (document.selection) {
+                 document.selection.empty(); 
+                }
+                else if (window.getSelection) {
+                    window.getSelection().removeAllRanges();
+                }
+            }
+            $("span.sel-host").click(function(){
+                fnSelect(this);
+            });
+function Donfromsw() {
+var sum = $("#sum").val();
+if (sum < 9) {
+} else {
+location.href="https://unitpay.ru/pay/{{unitpayPublicKey}}/qiwi?sum=" + sum + "&account=donate&desc=Пожертвование+в+сторону+проекта+{{title}}";
+    }
+    }
+
+        </script>
+
+        {{yandexCounter}}
+  </body>
+</html>
